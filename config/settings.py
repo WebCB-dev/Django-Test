@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -87,8 +88,8 @@ DATABASES = {
         'NAME': os.getenv("PGDATABASE"),
         'USER': os.getenv("PGUSER"),
     'PASSWORD': os.getenv("PGUSER"),
-        'HOST': os.getenv("PGHOST"),
-        'PORT': os.getenv("PGPORT"),
+        # 'HOST': os.getenv("PGHOST"),
+        # 'PORT': os.getenv("PGPORT"),
     }
 }
 
